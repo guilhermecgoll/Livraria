@@ -2,6 +2,9 @@
 
 <p *ngIf="!livros"><em>Carregando...</em></p>
 
+<a [routerLink]='["/novo"]'>
+  <span class='plus'></span> Novo
+</a>
 <table class='table' *ngIf="livros">
   <thead>
     <tr>

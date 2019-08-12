@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-list-books',
-  templateUrl: './list-books.component.html',
+  templateUrl: './list-books.component.html'
 })
 export class ListBooksComponent {
   public livros: Livro[];
@@ -17,5 +17,6 @@ export class ListBooksComponent {
 }
 
 interface Livro {
+  id: number;
   titulo: string;
 }

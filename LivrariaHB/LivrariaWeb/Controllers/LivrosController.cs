@@ -25,5 +25,17 @@ namespace LivrariaWeb.Controllers
             //Livro[] lvr = new Livro[] { livro1, livro2 };
             //return Json(lvr);
         }
+
+        [HttpPost("[action]")]
+        public IActionResult Criar(Livro livro)
+        {
+            if (ModelState.IsValid)
+            {
+                _repo.Incluir(livro);
+                return RedirectToAction("list-books", "Livros");
+            }
+
+            return BadRequest();
+        }
     }
 }

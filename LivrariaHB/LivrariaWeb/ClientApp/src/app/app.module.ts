@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ListBooksComponent } from './list-books/list-books.component';
+import { NovoComponent } from './novo/novo.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ListBooksComponent } from './list-books/list-books.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    ListBooksComponent
+    ListBooksComponent,
+    NovoComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,6 +31,7 @@ import { ListBooksComponent } from './list-books/list-books.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'list-books', component: ListBooksComponent },
+      { path: 'novo', component: NovoComponent }
     ])
   ],
   providers: [],
