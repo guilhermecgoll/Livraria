@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Livro } from '../Livro';
 
 @Component({
   selector: 'app-list-books',
@@ -14,9 +15,4 @@ export class ListBooksComponent {
       console.log(result);
     }, error => console.error(error));
   }
-}
-
-interface Livro {
-  id: number;
-  titulo: string;
 }

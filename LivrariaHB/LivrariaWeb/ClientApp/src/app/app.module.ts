@@ -7,18 +7,19 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
+//import { CounterComponent } from './counter/counter.component';
+//import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ListBooksComponent } from './list-books/list-books.component';
 import { NovoComponent } from './novo/novo.component';
+import { LivroService } from './LivroService';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
+    //CounterComponent,
+    //FetchDataComponent,
     ListBooksComponent,
     NovoComponent
   ],
@@ -28,13 +29,13 @@ import { NovoComponent } from './novo/novo.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      //{ path: 'counter', component: CounterComponent },
+      //{ path: 'fetch-data', component: FetchDataComponent },
       { path: 'list-books', component: ListBooksComponent },
-      { path: 'novo', component: NovoComponent }
+      { path: 'novo/:id', component: NovoComponent }
     ])
   ],
-  providers: [],
+  providers: [LivroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

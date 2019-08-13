@@ -2,10 +2,17 @@
 
 <p *ngIf="!livros"><em>Carregando...</em></p>
 
-<a [routerLink]='["/novo"]'>
-  <span class='plus'></span> Novo
-</a>
-<table class='table' *ngIf="livros">
+<div class="row">
+  <div class="col-md-11">
+  </div>
+  <div class="col-md-1">
+    <a [routerLink]='["/novo"]'>
+      <span class='btn btn-primary'>Novo</span>
+    </a>
+  </div>
+</div>
+
+<table class='table table-striped table-hover' *ngIf="livros">
   <thead>
     <tr>
       <th>Título</th>
@@ -13,7 +20,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let livro of livros">
-      <td>{{ livro.titulo}}</td>
+      <td><a [routerLink]='["/Livro", livro.id]'>{{ livro.titulo}}</a></td>
     </tr>
   </tbody>
 </table>

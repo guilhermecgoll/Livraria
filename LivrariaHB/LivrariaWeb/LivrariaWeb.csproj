@@ -26,8 +26,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\editar\editar.component.ts" />
     <None Remove="ClientApp\src\app\list-books\list-books.component.ts" />
     <None Remove="ClientApp\src\app\Livro.ts" />
+    <None Remove="ClientApp\src\app\LivroService.ts" />
     <None Remove="ClientApp\src\app\novo\novo.component.ts" />
   </ItemGroup>
 
@@ -37,8 +39,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\editar\editar.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\list-books\list-books.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\Livro.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\LivroService.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\novo\novo.component.ts" />
   </ItemGroup>
 
