@@ -20,7 +20,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let livro of livros">
-      <td><a [routerLink]='["/Livro", livro.id]'>{{ livro.titulo}}</a></td>
+      <td><a [routerLink]='["/editar", livro.id]'>{{ livro.titulo}}</a></td>
     </tr>
   </tbody>
 </table>

@@ -7,10 +7,9 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-//import { CounterComponent } from './counter/counter.component';
-//import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ListBooksComponent } from './list-books/list-books.component';
 import { NovoComponent } from './novo/novo.component';
+import { EditarComponent } from './editar/editar.component';
 import { LivroService } from './LivroService';
 
 @NgModule({
@@ -21,7 +20,8 @@ import { LivroService } from './LivroService';
     //CounterComponent,
     //FetchDataComponent,
     ListBooksComponent,
-    NovoComponent
+    NovoComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -32,7 +32,8 @@ import { LivroService } from './LivroService';
       //{ path: 'counter', component: CounterComponent },
       //{ path: 'fetch-data', component: FetchDataComponent },
       { path: 'list-books', component: ListBooksComponent },
-      { path: 'novo/:id', component: NovoComponent }
+      { path: 'novo', component: NovoComponent },
+      { path: 'editar/:id', component: EditarComponent }
     ])
   ],
   providers: [LivroService],

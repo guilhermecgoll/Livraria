@@ -3,12 +3,12 @@
 <form (ngSubmit)="onSubmit()" #livroForm="ngForm">
   <div class="form-group">
     <label for="titulo">Título</label>
-    <input type="text" class="form-control" id="titulo" required [(ngModel)]="model.Titulo" name="Titulo" #Titulo="ngModel" [ngModelOptions]="{ updateOn: 'change'}" />
+    <input type="text" class="form-control" id="titulo" required [(ngModel)]="model.titulo" name="titulo" #Titulo="ngModel" />
   </div>
   <div class="form-group">
     <button type="submit" class="btn btn-success" (click)="novoLivro(); livroForm.reset()"
             [disabled]="!livroForm.form.valid">
-      {{textSaveBtn}}
+      Salvar
     </button>
   </div>
 </form>

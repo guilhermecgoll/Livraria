@@ -1,4 +1,4 @@
 export class Livro {
-  public Id?: number;
-  public Titulo: string;
+  public id?: number;
+  public titulo: string;
 }

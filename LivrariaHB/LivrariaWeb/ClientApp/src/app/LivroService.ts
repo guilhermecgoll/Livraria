@@ -11,4 +11,12 @@ export class LivroService {
   carregarLivro(id: number | string) {
     return this.http.get<Livro>(this.baseUrl + 'Livro/' + id);
   }
+
+  novoLivro(model: Livro) {
+    return this.http.post<Livro>(this.baseUrl + 'Livro', model, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    });
+  }
 }
