@@ -1,6 +1,6 @@
-import { Component, Inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
 import { Livro } from '../Livro';
+import { LivroService } from '../LivroService';
 
 @Component({
   selector: 'app-list-books',
@@ -9,10 +9,9 @@ import { Livro } from '../Livro';
 export class ListBooksComponent {
   public livros: Livro[];
 
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<Livro[]>(baseUrl + 'api/Livros/ListarTodos').subscribe(result => {
+  constructor(private service: LivroService) {
+    this.service.carregarLivros().subscribe(result => {
       this.livros = result;
-      console.log(result);
     }, error => console.error(error));
   }
 }

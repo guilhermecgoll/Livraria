@@ -40,5 +40,18 @@ namespace LivrariaWeb.API
 
             return BadRequest();
         }
+
+        [HttpPut]
+        public IActionResult Alterar([FromBody] Livro model)
+        {
+            if(ModelState.IsValid)
+            {
+                var livro = model;
+                _repo.Alterar(livro);
+                return Ok(livro);
+            }
+
+            return BadRequest();
+        }
     }
 }
